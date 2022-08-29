@@ -17,7 +17,7 @@ a:hover{
 }
 
 .logo{
-    font-size: 28px;
+    font-size: 20px;
     text-transform: uppercase;
     letter-spacing: 3px;
 }
@@ -30,3 +30,12 @@ nav {
     background: #232323;
     height: 8vh;
 }   
+
+/* Imagem do corpo da pagina */
+
+main{
+    background: url("../img/imag01.jpg") no-repeat center center;
+    background-size: cover;
+    height: 92vh;
+
+}
