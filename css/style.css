@@ -31,11 +31,20 @@ nav {
     height: 8vh;
 }   
 
+.nav-list {
+    list-style: none;
+    display: flex;
+}
+
+.nav-list li {
+    letter-spacing: 3px;
+    margin-left: 30px;
+    margin-right: 15px;
+}
 /* Imagem do corpo da pagina */
 
 main{
     background: url("../img/imag01.jpg") no-repeat center center;
     background-size: cover;
     height: 92vh;
-
 }
