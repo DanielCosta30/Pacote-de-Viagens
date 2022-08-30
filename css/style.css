@@ -42,21 +42,6 @@ nav {
     margin-right: 15px;
 }
 
-/* Menu Hamburgue */
-
-
-.mobile-menu {
-    cursor: pointer;
-}
-
-.mobile-menu div {
-    width: 32px;
-    height: 2px;
-    background: #ffff;
-    margin: 8px;
-}
-
-
 
 /* Imagem do corpo da pagina */
 
