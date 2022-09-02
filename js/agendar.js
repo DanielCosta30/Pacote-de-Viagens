@@ -1,30 +1,30 @@
-var btn = document.querySelector('#vercfp')
+let btn = document.querySelector('#vercfp')
 
-var nome = document.querySelector('#nome')
-var labelnome = document.querySelector('#labelnome')
-var validnome = false
+let nome = document.querySelector('#nome')
+let labelnome = document.querySelector('#labelnome')
+let validnome = false
 
-var cpf = document.querySelector('#cpf')
-var labelcpf = document.querySelector('#labelcpf')
+let cpf = document.querySelector('#cpf')
+let labelcpf = document.querySelector('#labelcpf')
 var validcpf = false
 
-var email = document.querySelector('#email')
-var labelemail = document.querySelector('#labelemail')
-var validemail = false
+let email = document.querySelector('#email')
+let labelemail = document.querySelector('#labelemail')
+let validemail = false
 
-var destino = document.querySelector('#destino')
-var labeldestino = document.querySelector('#labeldestino')
-var validdestino = false
+let destino = document.querySelector('#destino')
+let labeldestino = document.querySelector('#labeldestino')
+let validdestino = false
 
-var data = document.querySelector('#data')
-var labeldata = document.querySelector('#labeldata')
-var validdata = false
+let data = document.querySelector('#data')
+let labeldata = document.querySelector('#labeldata')
+let validdata = false
 
-var contato = document.querySelector('#contato')
-var labelcontato = document.querySelector('#labelcontato')
-var validcontato = false
+let contato = document.querySelector('#contato')
+let labelcontato = document.querySelector('#labelcontato')
+let validcontato = false
 
-var destinoEuropa = "Europa";
+let destinoEuropa = "Europa";
 
 
 let msgError = document.querySelector('#msgError')
