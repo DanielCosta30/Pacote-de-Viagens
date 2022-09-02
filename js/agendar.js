@@ -24,6 +24,9 @@ var contato = document.querySelector('#contato')
 var labelcontato = document.querySelector('#labelcontato')
 var validcontato = false
 
+var destinoEuropa = "Europa";
+
+
 let msgError = document.querySelector('#msgError')
 let msgSuccess = document.querySelector('#msgSuccess')
 
@@ -38,36 +41,65 @@ nome.addEventListener('keyup', () => {
 } else {
   labelnome.setAttribute('style', 'color: #000 ')
   labelnome.innerHTML ='Nome:'
-  validemail = true
+  validnome = true
+}
+
+})
+
+cpf.addEventListener('keyup', () => {
+  if(cpf.value.length <= 3){
+  labelcpf.setAttribute('style', 'color: red ')
+  labelcpf.innerHTML = 'Cpf * inválido'
+  validcpf = false
+ 
+} else {
+  labelcpf.setAttribute('style', 'color: #000 ')
+  labelcpf.innerHTML ='Cpf:'
+  validcpf = true
 }
 
 })
 
 email.addEventListener('keyup', () => {
-  if(email.value.length <= 5){
+  if(email.value.length <= 3){
   labelemail.setAttribute('style', 'color: red ')
-  labelemail.innerHTML = 'email *Email inválido'
+  labelemail.innerHTML = 'Email * inválido'
   validemail = false
  
 } else {
-  labelemail.setAttribute('style', 'color: #000 ')
-  labelemail.innerHTML ='Email:'
-  validemail = true
+  labelcpf.setAttribute('style', 'color: #000 ')
+  labelcpf.innerHTML ='Cpf:'
+  validcpf = true
 }
 
 })
 
-confirmsenha.addEventListener('keyup', () => {
-  if(senha.value != confirmsenha.value){
-  labelconfirmsenha.setAttribute('style', 'color: red ')
-  labelconfirmsenha.innerHTML = 'Confirma sua senha *Não conferem'
-  validconfirmsenha = false
+destino.addEventListener('keyup', () => {
+  if(destino.value.length != destinoEuropa ){
+  labeldestino.setAttribute('style', 'color: red ')
+  labeldestino.innerHTML = 'Destino *inválido'
+  validdestino = false
  
-  } else {
-  labelconfirmsenha.setAttribute('style', 'color: #000 ')
-  labelconfirmsenha.innerHTML ='Confirme sua senha :'
-  validconfirmsenha = true      
-  }   
+} else {
+  labeldestino.setAttribute('style', 'color: #000 ')
+  labeldestino.innerHTML ='Destino:'
+  validdestino = true
+}
+
+})
+
+contato.addEventListener('keyup', () => {
+  if(contato.value.length <= 3){
+  labelcontato.setAttribute('style', 'color: red ')
+  labelcontato.innerHTML = 'Contato *inválido'
+  validcontato = false
+ 
+} else {
+  labelcontato.setAttribute('style', 'color: #000 ')
+  labelcontato.innerHTML ='Contato:'
+  validcontato = true
+}
+
 })
 
 /*  <------*/
