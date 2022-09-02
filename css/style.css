@@ -49,14 +49,52 @@ body{
 /* Imagem do corpo da pagina */
 
 main{
-    background: url("../img/imag01.jpg") no-repeat center center;
+    position: relative;
+    background: url("../img/img06.jpg") no-repeat center center;
     background-size: cover;
     height: 92vh;
     margin: 50px 60px 0px 60px;
+    box-shadow: 1px 2px 10px #000,3px 6px 20px #000;
 }
 
+
+.sub-title {
+    position: absolute;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 80px;
+    font-style: italic;
+    color: rgba(165, 52, 37, 0.849);
+    font-family:sans-serif ;
+    letter-spacing: 3px;
+    margin-top: 280px;
+    margin-left:38vh ;
+    letter-spacing: 4px;
+    font-weight: bold;   
+}
+.sub-title:hover{
+    color:rgba(168, 80, 65, 0.849) ;
+    transition: 0.3s; 
+}
+
+.btn-agendar{
+    margin-top: 360px;
+    margin-left: 60vh ;
+    padding: 10px;
+    border-radius: 8px;
+    background: #383838;
+    margin-left: 525px;
+    border: 1px solid;
+
+
+}
+
+.btn-agendar:hover{
+    background: rgba(168, 80, 65, 0.849);
+    transition: 0.3s;
+
+}
 .menu{
-    
     display: flex;
     justify-content: center;
     height: auto;
@@ -89,8 +127,11 @@ input{
 
 
 .btn {
+    
     margin-top: 5vh;
-    padding: 8px;
+    padding: 12px;
+    padding-right: 20px;
+    padding-left: 20px;
     border-radius: 8px;
     background: transparent;
     
@@ -121,12 +162,30 @@ p{
     padding-top: 1vh;
 }
 
-.video-destino {  
+
+.video-destinos{
     display: flex;
-    margin: 60px 60px;
-    z-index: -90;
+    justify-content: center;
+    height: auto;
+    margin: 10px 60px 10px 60px;
+
+}
+.destino{
+    padding: 0.2vh;
+    margin: 0.3vh;
+    letter-spacing: 3px;
+    font-weight: bold;
+    
 }
 
-h2{
-    margin-left: 20px;
+.paises{
+    margin-top: 5px;
+    padding: 0.5vh;
+    border-radius: 10px;  
+    
+}
+
+.midia {
+    margin: auto 10px;
+    align-items: center;
 }
