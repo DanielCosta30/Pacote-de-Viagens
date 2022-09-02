@@ -50,7 +50,7 @@ body{
 
 main{
     position: relative;
-    background: url("../img/img06.jpg") no-repeat center center;
+    background: url("../bg-02.jpg") no-repeat center center;
     background-size: cover;
     height: 92vh;
     margin: 50px 60px 0px 60px;
