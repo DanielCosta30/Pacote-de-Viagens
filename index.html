@@ -15,60 +15,51 @@
         <nav>
             <a class="logo" href=""> Trip Aventure </a>
             <ul class="nav-list">
-                <li><a href="/">Inicio</a></li>
-                <li><a href="/">Sobre</a></li>
-                <li><a href="/">Contato</a></li>
+                <li><a href="./index.html">Inicio</a></li>
+                <li><a href="./agendar.html">Agendar</a></li>
+                <li><a href="./consultar.html">Consultar</a></li>
             </ul>
         </nav>     
     </header>
 
+
     <main>
+        <audio autoplay src="../Projeto#02/midia/audio5.mp3"></audio>
         <section class="principal">
-
-            <h1>Faça Parte da Historia, <br>
-            contando sua versão dela !!</h1>
-
+            <h1 class="sub-title">desconecte-se</h1>
         </section>
 
     </main>
 
     <section class="menu">
 
-        <div class="caixa">
-            <label id="localidade">Onde</label>
-            <input type="search" placeholder="Escolha seu Destino">
-        </div>
-
-        <div class="caixa">
-            <label id="date">Quando</label>
-            <input type="date" placeholder="Escolha a data de check Iin">
-        </div>
-
-        <div class="caixa">
-            <label id="Pessoas">Pessoas</label>
-            <input type="number" placeholder="Quantas pessoas">
-        </div>
-
         <div>
-            <button class="btn" onclick="pesquisar"> Encontrar Vaga</button>
+            <button class="btn" onclick="pesquisar">AGENDAR VAGA</button>
         </div>
 
     </section>
 
-    <section class="video-destino">
-        <div id="video"> 
-            <iframe width="500" 
+ 
+    <section class="video-destinos">
+        <div class="midia"> 
+            <p class="destino">EUROPA</p>
+            <iframe class="paises" width="500" 
                     height="320" src="https://www.youtube.com/embed/ZHHbpy91O2E?autoplay=1&mute=1&controls=0&loop=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; 
-                    clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>  
-          </div>
-          <h2> O que você está esperando?</h2>
-        
+                    clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+            </iframe>  
+
+        <div class="midia"> 
+            <p class="destino">EUA</p> 
+            <iframe class="paises" width="500" 
+            height="320" src="https://www.youtube.com/embed/1GYcoL-0mrU?autoplay=1&mute=1&controls=0&loop=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; 
+            clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+            </iframe>  
+        </div> 
     </section>
-    
 
     <footer>
-        <p class="copyrigth"> &copy; Copyrigth Barbearia Alura - 2019</p>
+        <p class="copyrigth"> &copy; Copyrigth TRIP AVENTURE - 2019</p>
     </footer>
 
-</body>
+</body>=
 </html>
