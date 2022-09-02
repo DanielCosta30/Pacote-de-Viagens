@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>TRIP AVENTURE - VERIFICAR AGENDAMENTO</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/consulta.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> 
+
+</head>
+<body>
+    <header>
+        <nav>
+            <a class="logo" href=""> Trip Aventure </a>
+            <ul class="nav-list">
+                <li><a href="./index.html">Inicio</a></li>
+                <li><a href="./agendar.html">Agendar</a></li>
+                <li><a href="./consultar.html">Consultar</a></li>
+            </ul>
+        </nav>     
+    </header>
+
+
+    <main>
+        <div class="container">      
+            <h2>Consultar agendamento</h2>
+            
+            <div id='msgError'></div>
+            <div id='msgSuccess'></div>
+            
+            <form>
+
+                <div class="input-field">
+                    <input type="text" id="nome" placeholder="Nome completo" required>
+                    <label id="labelnome" for="email">Nome:</label>
+                </div>
+                <div class="input-field">
+                    <input typ="text" id="cpf" placeholder="xxx-xxx-xxx-xx" required>
+                    <label id="labelcpf" for="email">CPF:</label>
+                    <i id="vercpf" class="fa fa-eye" aria-hidden="true"></i>
+                </div>
+
+                <div class="button">
+                    <button class="agendar-usuario" onclick='cadastrar()' > Consultar</button>
+                </div>
+       
+            </form>
+        </div>
+
+
+    </main>
+
+
+    <footer>
+        <p class="copyrigth"> &copy; Copyrigth TRIP AVENTURE - 2019</p>
+    </footer>
+
+</body>
+</html>
