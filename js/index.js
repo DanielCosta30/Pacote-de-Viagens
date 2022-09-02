@@ -1,6 +1,6 @@
-var entralogin = document.querySelector(".acesso");
+var entra= document.querySelector(".acesso");
 
-entralogin.addEventListener("click", function (event) {
+entra.addEventListener("click", function (event) {
   event.preventDefault();
 
 })
