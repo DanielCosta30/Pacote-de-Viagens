@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>TRIP AVENTURE</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/agendar.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> 
+
+</head>
+<body>
+    <header>
+        <nav>
+            <a class="logo" href=""> Trip Aventure - agendar</a>
+            <ul class="nav-list">
+                <li><a href="./index.html">Inicio</a></li>
+                <li><a href="./agendar.html">Agendar</a></li>
+                <li><a href="./consultar.html">Consultar</a></li>
+            </ul>
+        </nav>     
+    </header>
+
+
+    <main>
+        <div class="container">     
+
+            <h2>Agendar viagem</h2>
+            
+            <div id='msgError'></div>
+            <div id='msgSuccess'></div>
+            
+            <form>
+
+                <div class="input-field">
+                    <input type="text" id="nome" placeholder="Insira seu nome completo" required>
+                    <label id="labelnome" for="email">Nome:</label>
+                </div>
+                <div class="input-field">
+                    <input typ="text" id="cpf" placeholder="xxx-xxx-xxx-xx" required>
+                    <label id="labelcpf" for="email">CPF:</label>
+                    <i id="vercpf" class="fa fa-eye" aria-hidden="true"></i>
+                </div>
+
+                <div class="input-field">
+                    <input type="email" id="email" placeholder="Insira seu email" required>
+                    <label id="labelemail" for="email">Email:</label>
+                </div>
+
+                <div class="input-field">
+                    <input type="text" id="destino" placeholder="Local de destino" required>
+                    <label id="labeldestino" for="destino">Destino:</label>
+                </div>
+
+                <div class="input-field">
+                    <input type="date" id="data" placeholder="Insira seu email" required>
+                    <label id="labeldata" for="data">Data:</label>
+                </div>
+
+                <div class="input-field">
+                    <input type="number" id="pessoas" placeholder="Quantidade de pessoas" required>
+                    <label id="labelpessoas" for="pessoas">Pessoas:</label>
+                </div>
+
+                <div class="input-field">
+                    <input type="tel" id="number" placeholder="(xx) x xxxx-xxxx" required>
+                    <label id="labelnumber" for="telefone">Contato:</label>
+                </div>
+
+                <div class="button">
+                    <button class="agendar-usuario" onclick='cadastrar()' >Agendar</button>
+                </div>
+        
+            </form>
+        </div>
+
+
+    </main>
+
+
+    <footer>
+        <p class="copyrigth"> &copy; Copyrigth TRIP AVENTURE - 2019</p>
+    </footer>
+
+</body>
+</html>
