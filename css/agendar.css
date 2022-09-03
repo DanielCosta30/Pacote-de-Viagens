@@ -49,7 +49,7 @@ body{
 /* Imagem do corpo da pagina */
 
 main{
-    background: url(../bg.jpg) no-repeat center center;
+    background: url(./bg.jpg) no-repeat center center;
     background-size: cover;
     position: relative;
     height: 92vh;
