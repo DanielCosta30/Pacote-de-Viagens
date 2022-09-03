@@ -20,6 +20,11 @@ let data = document.querySelector('#data')
 let labeldata = document.querySelector('#labeldata')
 let validdata = false
 
+let pessoas = document.querySelector('#pessoas')
+let labelpessoas = document.querySelector('#labelpessoas')
+let qpessoa = 0
+let validpessoas= false
+
 let contato = document.querySelector('#contato')
 let labelcontato = document.querySelector('#labelcontato')
 let validcontato = false
@@ -71,9 +76,9 @@ email.addEventListener('keyup', () => {
   validemail = false
  
 } else {
-  labelcpf.setAttribute('style', 'color: #000 ')
-  labelcpf.innerHTML ='Cpf:'
-  validcpf = true
+  labelemail.setAttribute('style', 'color: #000 ')
+  labelemail.innerHTML ='Cpf:'
+  validemail= true
 }
 
 })
@@ -83,8 +88,7 @@ destino.addEventListener('keyup', () => {
   let destinoValorMaisculo = destino.value.toUpperCase()
   let destinoEuropaMaisculo = destinoEuropa.toUpperCase()
   
-if( (destinoValorMaisculo.localeCompare (destinoEuaMaisculo )) ||
-   (destinoValorMaisculo.localeCompare (destinoEuropaMaisculo)) ) {
+if(destinoValorMaisculo.localeCompare (destinoEuropaMaisculo)) {
     labeldestino.setAttribute('style', 'color: red ')
     labeldestino.innerHTML = 'Destino *inválido '
     validdestino = false
@@ -93,6 +97,33 @@ if( (destinoValorMaisculo.localeCompare (destinoEuaMaisculo )) ||
     labeldestino.setAttribute('style', 'color: #000 ')
     labeldestino.innerHTML = 'Destino: '
     validdestino = true
+}
+
+})
+
+data.addEventListener('keyup', () => {
+  if(data.value.length <= 3){
+  labeldata.setAttribute('style', 'color: red ')
+  labeldata.innerHTML = 'Data *inválida'
+  validdata = false
+ 
+} else {
+  labeldata.setAttribute('style', 'color: #000 ')
+  labeldata.innerHTML ='Data:'
+  validdata = true
+}
+})
+
+pessoas.addEventListener('keyup', () => {
+  if(pessoas.value == Number.parseInt(0)){
+  labelpessoas.setAttribute('style', 'color: red ')
+  labelpessoas.innerHTML = 'Quantidade *inválida'
+  validpessoas = false
+ 
+} else {
+  labelpessoas.setAttribute('style', 'color: #000 ')
+  labelpessoas.innerHTML ='Pessoas:'
+  validpessoas = true
 }
 
 })
@@ -121,7 +152,7 @@ let agendarpacote = document.querySelector('.agendar-usuario');
 agendarpacote.addEventListener ("click", function(event) {
     event.preventDefault();
  
-    if (validnome && validcpf && validemail && validdestino && validcontato ){
+    if (validnome && validcpf && validemail && validdata && validdestino && validpessoa && validcontato ){
         let listauser = JSON.parse(localStorage.getItem('listauser') || '[]')
 
         listauser.push(
@@ -130,7 +161,10 @@ agendarpacote.addEventListener ("click", function(event) {
              nomecad: nome.value,
              cpfcad: cpf.value,
              emailcad: email.value,
+             datacad: data.value,
              destinocad: destino.value,
+             pessoascad: pessoas.value,
+             contatocad: contato.value
 
         }      
         )
