@@ -35,3 +35,35 @@ consultarag.addEventListener("click", function (event) {
     cpf: "",
   };
   listauser = JSON.parse(localStorage.getItem("listauser"));
+
+
+    /*ForEach  vai vazer minha lista item por item  em cada lista*/
+
+    listauser.forEach((item) => {
+        if (nome.value == item.nomecad || cpf.value == item.cpfcad) {
+          uservalid = {
+            nome: item.emailcad,
+            cpf: item.cpfcad,
+          };
+        }
+      });
+    
+      if (nome.value == uservalid.nome && cpf.value == uservalid.cpf) {
+    
+        window.location.href='./agendamento.html'
+        
+      } else {
+    
+        nomelabel.setAttribute('style', 'color: red')
+        nome.setAttribute('style', 'border-color: red')
+        cpflabel.setAttribute('style', 'color: red')
+        cpf.setAttribute('style', 'border-color: red')
+        msgError.setAttribute('style', 'display: block')
+        msgError.innerHTML = 'Usuário ou senha incorretos'
+        nome.focus()
+    
+      }
+    
+    });
+    
+    
