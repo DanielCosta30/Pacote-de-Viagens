@@ -1,4 +1,5 @@
-let btn = document.querySelector('#vercfp')
+var btn = document.querySelector('#vercpf')
+
 
 let nome = document.querySelector('#nome')
 let labelnome = document.querySelector('#labelnome')
@@ -29,10 +30,25 @@ let contato = document.querySelector('#contato')
 let labelcontato = document.querySelector('#labelcontato')
 let validcontato = false
 
+/* Visualizar senha */
+
+var btn = document.querySelector(".fa-eye");
+
+btn.addEventListener("click", () => {
+  var inputcpf = document.querySelector("#cpf");
+
+  if (inputcpf.getAttribute("type") == "password") {
+    inputcpf.setAttribute("type", "text");
+  } else {
+    inputcpf.setAttribute("type", "password");
+  }
+});
 
 
-let destinoEuropa = ["Europa", "Eua"]
-let destinoEua = "Eua"
+
+/* validação dos input item NOK, o destino EUA não está sendo lido - ---->*/
+let destinoEuropa = "Europa"
+
 
 
 
@@ -152,7 +168,7 @@ let agendarpacote = document.querySelector('.agendar-usuario');
 agendarpacote.addEventListener ("click", function(event) {
     event.preventDefault();
  
-    if (validnome && validcpf && validemail && validdata && validdestino && validpessoa && validcontato ){
+    if (validnome && validcpf && validemail && validdata && validdestino && validpessoas && validcontato ){
         let listauser = JSON.parse(localStorage.getItem('listauser') || '[]')
 
         listauser.push(
@@ -173,7 +189,7 @@ agendarpacote.addEventListener ("click", function(event) {
 
 
         msgSuccess.setAttribute('style', 'display: block')
-        msgSuccess.innerHTML = 'Cadastro realizado com sucesso'
+        msgSuccess.innerHTML = 'Passagem agendada com sucesso'
         msgError.setAttribute('style', 'display: none')
         msgError.innerHTML = ''
         
