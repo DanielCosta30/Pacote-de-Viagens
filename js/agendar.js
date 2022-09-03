@@ -24,7 +24,11 @@ let contato = document.querySelector('#contato')
 let labelcontato = document.querySelector('#labelcontato')
 let validcontato = false
 
-let destinoEuropa = "Europa";
+
+
+let destinoEuropa = ["Europa", "Eua"]
+let destinoEua = "Eua"
+
 
 
 let msgError = document.querySelector('#msgError')
@@ -75,15 +79,20 @@ email.addEventListener('keyup', () => {
 })
 
 destino.addEventListener('keyup', () => {
-  if(destino.value.length != destinoEuropa ){
-  labeldestino.setAttribute('style', 'color: red ')
-  labeldestino.innerHTML = 'Destino *inválido'
-  validdestino = false
- 
+
+  let destinoValorMaisculo = destino.value.toUpperCase()
+  let destinoEuropaMaisculo = destinoEuropa.toUpperCase()
+  
+if( (destinoValorMaisculo.localeCompare (destinoEuaMaisculo )) ||
+   (destinoValorMaisculo.localeCompare (destinoEuropaMaisculo)) ) {
+    labeldestino.setAttribute('style', 'color: red ')
+    labeldestino.innerHTML = 'Destino *inválido '
+    validdestino = false
+
 } else {
-  labeldestino.setAttribute('style', 'color: #000 ')
-  labeldestino.innerHTML ='Destino:'
-  validdestino = true
+    labeldestino.setAttribute('style', 'color: #000 ')
+    labeldestino.innerHTML = 'Destino: '
+    validdestino = true
 }
 
 })
@@ -100,6 +109,53 @@ contato.addEventListener('keyup', () => {
   validcontato = true
 }
 
+})
+
+/*  <------*/
+
+
+/*  função agendar ---->*/
+
+let agendarpacote = document.querySelector('.agendar-usuario');
+
+agendarpacote.addEventListener ("click", function(event) {
+    event.preventDefault();
+ 
+    if (validnome && validcpf && validemail && validdestino && validcontato ){
+        let listauser = JSON.parse(localStorage.getItem('listauser') || '[]')
+
+        listauser.push(
+            {
+
+             nomecad: nome.value,
+             cpfcad: cpf.value,
+             emailcad: email.value,
+             destinocad: destino.value,
+
+        }      
+        )
+
+        localStorage.setItem('listauser', JSON.stringify(listauser))
+
+
+        msgSuccess.setAttribute('style', 'display: block')
+        msgSuccess.innerHTML = 'Cadastro realizado com sucesso'
+        msgError.setAttribute('style', 'display: none')
+        msgError.innerHTML = ''
+        
+        setTimeout(()=> {
+
+        window.location.href='./index.html'
+
+        }, 1000)
+        
+    
+    } else {
+        msgError.setAttribute('style', 'display: block')
+        msgError.innerHTML = 'Prencha todos so campos corretamente'
+        msgSuccess.innerHTML = ''
+        msgSuccess.setAttribute('style', 'display: none')
+    }
 })
 
 /*  <------*/
