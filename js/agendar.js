@@ -83,7 +83,7 @@ email.addEventListener('keyup', () => {
 
 })
 
-destino.addEventListener('keyup', () => {
+destino.addEventListener('keyup', () => {   /*  não está finalizado validação de destino ---->*/
 
   let destinoValorMaisculo = destino.value.toUpperCase()
   let destinoEuropaMaisculo = destinoEuropa.toUpperCase()
