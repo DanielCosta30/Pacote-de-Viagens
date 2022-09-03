@@ -1,14 +1,28 @@
 var btn = document.querySelector('#vercpf')
 
+
+/* Visualizar senha */
+
+var btn = document.querySelector(".fa-eye");
+
+btn.addEventListener("click", () => {
+  var inputcpf = document.querySelector("#cpf");
+
+  if (inputcpf.getAttribute("type") == "password") {
+    inputcpf.setAttribute("type", "text");
+  } else {
+    inputcpf.setAttribute("type", "password");
+  }
+});
+
+
 /* verificar agendamento---->*/
 
 let nome = document.querySelector('#nome')
 let labelnome = document.querySelector('#labelnome')
-let validnome = false
 
 let cpf= document.querySelector('#senha')
 let labelcpf = document.querySelector('#labelcpf')
-let validcpf = false
 
 let msgError = document.querySelector('#msgError')
 let msgSuccess = document.querySelector('#msgSuccess')
@@ -42,7 +56,7 @@ consultarag.addEventListener("click", function (event) {
     listauser.forEach((item) => {
         if (nome.value == item.nomecad || cpf.value == item.cpfcad) {
           uservalid = {
-            nome: item.emailcad,
+            nome: item.nomecad,
             cpf: item.cpfcad,
           };
         }
@@ -50,13 +64,16 @@ consultarag.addEventListener("click", function (event) {
     
       if (nome.value == uservalid.nome && cpf.value == uservalid.cpf) {
     
-        window.location.href='./agendamento.html'
-        
+        setTimeout(()=> {
+
+            window.location.href='./agendamento.html'
+    
+            }, 1000)
       } else {
     
-        nomelabel.setAttribute('style', 'color: red')
+        labelnome.setAttribute('style', 'color: red')
         nome.setAttribute('style', 'border-color: red')
-        cpflabel.setAttribute('style', 'color: red')
+        labelcpf.setAttribute('style', 'color: red')
         cpf.setAttribute('style', 'border-color: red')
         msgError.setAttribute('style', 'display: block')
         msgError.innerHTML = 'Usuário ou senha incorretos'
