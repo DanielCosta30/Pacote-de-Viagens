@@ -78,7 +78,7 @@ h2  {
 }
 
 section .img{
-    background: url(../img/imag02.jpg);
+    background: url(./imag02.jpg);
     background-size: cover;
     height: 40px;
     
