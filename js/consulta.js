@@ -1,1 +1,1 @@
-/* COMMIT ANTERIOR INVÁLIDO---->*/
+var btn = document.querySelector('#vercpf')
