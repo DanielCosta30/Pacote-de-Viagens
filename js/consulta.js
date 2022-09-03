@@ -2,13 +2,13 @@ var btn = document.querySelector('#vercpf')
 
 /* verificar agendamento---->*/
 
-let email = document.querySelector('#email')
-let labelemail = document.querySelector('#labelemail')
-let validemail = false
+let nome = document.querySelector('#nome')
+let labelnome = document.querySelector('#labelnome')
+let validnome = false
 
-let senha = document.querySelector('#senha')
-let labelsenha = document.querySelector('#labelSenha')
-let validsenha = false
+let cpf= document.querySelector('#senha')
+let labelcpf = document.querySelector('#labelcpf')
+let validcpf = false
 
 let msgError = document.querySelector('#msgError')
 let msgSuccess = document.querySelector('#msgSuccess')
