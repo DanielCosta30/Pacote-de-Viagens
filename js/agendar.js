@@ -47,7 +47,10 @@ btn.addEventListener("click", () => {
 
 
 /* validação dos input item NOK, o destino EUA não está sendo lido - ---->*/
+
 let destinoEuropa = "Europa"
+let destinoEua = "Eua"
+
 
 
 
@@ -99,12 +102,15 @@ email.addEventListener('keyup', () => {
 
 })
 
-destino.addEventListener('keyup', () => {   /*  não está finalizado validação de destino ---->*/
+destino.addEventListener('keyup', () => { 
 
   let destinoValorMaisculo = destino.value.toUpperCase()
   let destinoEuropaMaisculo = destinoEuropa.toUpperCase()
-  
-if(destinoValorMaisculo.localeCompare (destinoEuropaMaisculo)) {
+  let destinoEuaMaisculo = destinoEua.toUpperCase()
+
+
+if(destinoValorMaisculo.localeCompare (destinoEuropaMaisculo) ==
+   destinoValorMaisculo.localeCompare (destinoEuaMaisculo)){
     labeldestino.setAttribute('style', 'color: red ')
     labeldestino.innerHTML = 'Destino *inválido '
     validdestino = false
